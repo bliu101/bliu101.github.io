@@ -1,2 +1,4 @@
-requests
 flask
+llmproxy==0.1.22
+protobuf==4.23.0
+grpcio-tools==1.57.0
