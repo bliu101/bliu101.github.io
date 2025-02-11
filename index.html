@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkpoint Quiz Generator</h1>
+        <label for="num_q">Number of Questions:</label>
+        <input type="number" id="num_q" min="1" required>
+        
+        <label for="unit_num">Which Unit?</label>
+        <input type="number" id="unit_num" min="1" required>
+        
+        <button onclick="generateQuiz()">Generate Quiz</button>
+        
+        <h2>Generated Quiz:</h2>
+        <pre id="quizOutput"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
