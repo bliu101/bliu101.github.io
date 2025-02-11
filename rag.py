@@ -46,6 +46,7 @@
 from flask import Flask, request, jsonify
 from llmproxy import generate
 import json
+import os  # Import os to access environment variables
 
 app = Flask(__name__)
 
