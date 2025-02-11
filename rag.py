@@ -49,6 +49,8 @@ import json
 import os  # Import os to access environment variables
 
 app = Flask(__name__)
+# Allow requests only from your GitHub Pages domain
+CORS(app, origins=["https://bliu101.github.io"])
 
 @app.route("/", methods=["GET"])
 def home():
