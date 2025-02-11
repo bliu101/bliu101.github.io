@@ -44,6 +44,7 @@
 #     print(json.dumps(response1, indent=4, ensure_ascii=False))
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from llmproxy import generate
 import json
 import os  # Import os to access environment variables
