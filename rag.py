@@ -49,6 +49,10 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Quiz Generation API is running!"})
+
 @app.route("/generate_quiz", methods=["POST"])
 def generate_quiz():
     """
