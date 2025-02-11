@@ -12,7 +12,7 @@ async function generateQuiz() {
     const requestBody = { num_q, unit_num };
 
     try {
-        const response = await fetch(`${API_BASE_URL}/bliu101.github.io`, {
+        const response = await fetch(`${API_BASE_URL}/generate_quiz`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(requestBody),
