@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://your-app.onrender.com"; // Replace with actual Render backend URL
+const API_BASE_URL = "https://bliu101-github-io.onrender.com"; // Replace with actual Render backend URL
 
 async function generateQuiz() {
     const num_q = document.getElementById("num_q").value;
