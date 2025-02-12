@@ -20,17 +20,13 @@ async function generateQuiz() {
 
         const data = await response.json();
 
-        // Format response text by replacing newline characters with <br>
-        const formattedResponse = data.response.replace(/\n/g, "<br>");
-        const formattedContext = data.rag_context.replace(/\n/g, "<br>");
+        // Format the response
+        const formattedResponse = JSON.stringify(data, null, 4)
+            .replace(/\\n/g, "\n")  // Replace escaped newlines with actual new lines
+            .replace(/\t/g, "    "); // Replace tabs with spaces for better readability
 
-        document.getElementById("quizOutput").innerHTML = `
-            <h3>Quiz Generated:</h3>
-            <p>${formattedResponse}</p>
-            <h3>Additional Context:</h3>
-            <p>${formattedContext}</p>
-        `;
-        //document.getElementById("quizOutput").textContent = JSON.stringify(data, null, 4);
+        document.getElementById("quizOutput").textContent = formattedResponse;
+
     } catch (error) {
         document.getElementById("quizOutput").textContent = "Error generating quiz.";
     }
